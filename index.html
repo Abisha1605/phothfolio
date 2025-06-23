@@ -1,135 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Anmol Chhetri" />
-<meta property="og:description" content="Welcome to Anmol Chhetri – Your guide to spiritual insights, transformative events, and uplifting news." />
-<meta property="og:image" content="anmolmeta.jpg" />
-<meta property="og:url" content="https://www.anmolchhetri.com.np" />
-<meta property="og:type" content="website" />
+    <meta property="og:title" content="Abisha Neupane" />
+    <meta property="og:description" content="Personal portfolio of Abisha Neupane, a full-stack web developer and BCA student from Butwal." />
+    <meta property="og:image" content="anmolmeta.jpg" />
+    <meta property="og:url" content="https://www.anmolchhetri.com.np" />
+    <meta property="og:type" content="website" />
+    <title>Abisha Neupane - Personal Portfolio</title>
+    <meta name="description" content="Personal portfolio for Abisha Neupane, BCA student from Butwal" />
+    <meta name="author" content="Abisha Neupane" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
 
+        body {
+            background-color: #f7f8f9;
+            color: #333;
+            line-height: 1.6;
+        }
 
-    <title>Anmol Chhetri - Personal Portfolio</title>
-    <meta name="description" content="Personal portfolio for Anmol Chhetri, BCA student from Butwal" />
-    <meta name="author" content="Anmol Chhetri" />
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css"><link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        .header {
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
 
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .logo {
+            font-size: 2rem;
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #00ff88;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu li a {
+            color: whitesmoke;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu li a:hover {
+            color: #00ff88;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+        .hero {
+            background-color: #000;
+            color: whitesmoke;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            max-width: 800px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            color: #00ff88;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text h2 {
+            font-size: 2rem;
+            color: whitesmoke;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: #00ff88;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #00cc70;
+        }
+
+        .hero-image {
+            padding-top: 15px;
+            width: 350px;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #00ff88;
+        }
+
+        .hero-image img {
+            /* width: 100%; */
+            /* height: 100%; */
+            object-fit: cover;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .about {
+            padding: 4rem 2rem;
+            background-color: #f7f8f9;
+        }
+
+        .about h2, .contact h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .about h2 span, .contact h2 span {
+            color: #00ff88;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p span {
+            color: #00ff88;
+        }
+
+        .resume-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: #000;
+            color: #00ff88;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .resume-button:hover {
+            background-color: #333;
+        }
+
+        .contact {
+            background-color: #000;
+            color: aquamarine;
+            padding: 4rem 2rem;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p a {
+            color: aquamarine;
+            text-decoration: none;
+        }
+
+        .contact-info p a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: aquamarine;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #00ff88;
+        }
+
+        @media (max-width: 800px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background-color: #000;
+                padding: 1rem 0;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .hero-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <nav></nav>
-    <section>
-        <div class="abisha">
-            <center>
-                <h1> ABISHA</h1>
-            </center>
-            <p>
-                <center> Personal portfolio hero image</center>
-            </p> <div class="form">
+    <header class="header">
+        <nav class="navigation">
+            <a href="#" class="logo">Abisha <span>Neupane</span></a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="skill.html">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                <nav>
-                    <div class="navigation">
-                        <div><a href="">Abisha <span style="color: green;">Neupane</span></a></div>
-                        <ul class="code">
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="pic.jpg.png" alt="Abisha Neupane" />
+            </div>
+            <div class="hero-text">
+                <h1>Abisha Neupane</h1>
+                <h2>Full Stack Web Developer</h2>
+                <p>Passionate about crafting innovative web solutions with 2 years of experience.</p>
+            </div>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
 
-                            <li> <a href="#ul"> About</a></li>
-                            <li> <a href="#contact"> Contact</a></li>
-                            <li> <a href="Education.html"> Education</a></li>
-                            <li> <a href="skill.html"> Skill</a></li>
-                        </ul>
-                    </div>
+    <section id="about" class="about">
+        <h2><span>|</span> About Me</h2>
+        <div class="about-content">
+            <p>Hello! I'm <span>Abisha Neupane</span>, a web designer and developer with a passion for computer science. I've been working as a web designer for 2 years and am currently pursuing my BCA in my 2nd semester at Butwal Kalika Campus. My goal is to create impactful and user-friendly web experiences.</p>
+            <a href="#" class="resume-button">Check My Resume</a>
+        </div>
+    </section>
 
-                        <select>
-                            <option value="About">about</option>
-                         <option value=" Contact"> Contact</option>
-                        <option value="Education">education</option>
-                        <option value=" skill ">skill</option>
-
-                        </select>
-                    </div>
-                    
-                </nav>
-             
-             <!-- profile start -->
-                <div class="ram">
-
-                <div class="image">
-                     <img src="pic.jpg.png" alt="">
-                </div> 
-                     <div class="a">
-                         <H1><i> ABISHA NEUPANE..</i></H1>
-                        </div>
-                
-                    <h2> A full stack <br>web developer </h2>
-                </div>
-            
+    <section id="contact" class="contact">
+        <h2><span>|</span> Connect With Me</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Address</h3>
+                <p>Rupandehi, Butwal, Nepal</p>
+                <h3>Email</h3>
+                <p><a href="mailto:abishaneupane589@gmail.com">abishaneupane589@gmail.com</a></p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-    
-        </div>
-    </section> 
-    <!-- contact -->
-     <hr> 
-     <div id="ul"> 
-         <center>
+    </section>
 
-             <ul>
-                 <li> | </li>
-                 <li> A</li>
-                 <li> B</li>
-                 <li> O</li>
-                 <li> U</li>
-                 <li> T</li>
-                </ul>
-            </center>
-     <div class=" hello">
-    
-<h1> High on Code</h1>
-        <h3> Hello<span style="color: green;">  !</span> <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
- </h3><br>
-    
-        <h4>  I am<span style="color: green;">Abisha Neupane </span>  . I am a <br><span style="color: green;"> web disigner </span>.  I have been work<br>  as a web desiginer sence<span style="color: green;">2 </span>years. I have always intrest in<span style="color: green;"> Computer Science </span>. So , now also i choose computer<br> science as my further study  . <br>. I see my future as a Web desiginer . Now i study in<br> <span style="color: green;">2nd semester </span><br> in<span style="color: green;"> butwal kalika campus</span> .    </h4>
-    
-    </div>  <br>
-
-    <center> <a> <button> check my resume</button> </a></center>
-    </div> 
-    <!-- /contact -->
-     <div id="contact">
-       <center> <ul>
-            <li> |</li>
-            <li> C</li>
-            <li> O</li>
-            <li> N</li>
-            <li> T</li>
-            <li> C</li>
-            <li> A </li>
-            <li> T</li>
-        </ul>
-        <h1 style="font-size:150px ;">  Connect<br>  Together</h1></center>
-        <div class="address">
-            <b> Address </b><br>
-            Nepal<br>
-            Rupendehi, Butwal<br><br><b
-            <b> Email</b><br>
-            <a href="https://myaccount.google.com/?tab=kk"> abisha neupane589gmail</a><br> <br>
-        </div>
-         <center> <div class="abi"> <ul>
-              <li> <a href="https://www.facebook.com/ ">  </a> <i class="fa-brands fa-facebook"></i></li>
-      <li><a href=" https://www.instagram.com"> </a><i class="fa-brands fa-instagram"></i></li>
-        <li>  <a href=" https://www.youtube.com/" style="color: brown;"><i class="fa-brands fa-youtube"></i> </a></li>
-       </ul>
-        </div> </center>
-     </div>
-     <div> 
-        
-     </div>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
-
-
 </html>
